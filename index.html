@@ -1,0 +1,344 @@
+<!-- Bhupesh L D Portfolio Website -->
+<!--Final code , attempt count:13  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhupesh L D - Portfolio </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .typing-text {
+      border-right: 2px solid #3B82F6; 
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to   { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50%      { border-color: #3B82F6; }
+    }
+
+    html { scroll-behavior: smooth; } 
+
+    .gradient-bg {
+      background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    }
+
+    .thank-you-page {
+      display:none;position:fixed;inset:0;z-index:1000;
+      background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      justify-content:center;align-items:center;
+    }
+    .thank-you-page.show{display:flex;}
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ###### THANK‑YOU OVERLAY ##### -->
+  <div id="thank-you-page" class="thank-you-page">
+    <div class="text-center text-white max-w-2xl mx-auto px-6">
+      <i class="fas fa-check-circle text-8xl text-green-400 mb-6"></i>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Thank you for contacting me!</h1>
+      <p class="text-xl md:text-2xl mb-8">I'll get back ASAP 😊</p>
+      <button id="back-to-portfolio" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 shadow-lg">
+        <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+      </button>
+    </div>
+  </div>
+  <!-- ###### NAVBAR ##### -->
+  <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl font-bold text-gray-800">Bhupesh L D</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home"     class="text-gray-600 hover:text-blue-600">Home</a>
+          <a href="#about"    class="text-gray-600 hover:text-blue-600">About</a>
+          <a href="#projects" class="text-gray-600 hover:text-blue-600">Projects</a>
+          <a href="#contact"  class="text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+        <a href="#home"     class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+        <a href="#about"    class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+        <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600">Projects</a>
+        <a href="#contact"  class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <section id="home" class="min-h-screen gradient-bg flex items-center justify-center pt-20">
+    <div class="container mx-auto px-6 text-center text-white">
+      <img src="https://avatars.githubusercontent.com/u/123456789?v=4 " alt="avatar" class="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-lg mb-8">
+
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-yellow-300">Bhupesh L D</span></h1>
+      <div class="text-xl md:text-2xl mb-6 h-8">
+        <span class="typing-text">Electronics & Communication Engineer & Web Developer</span>
+      </div>
+
+      <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">"Turning ideas into digital reality through clean code and innovative solutions"</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 shadow-lg">Get In Touch</a>
+        <a href="#" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600">
+          <i class="fas fa-download mr-2"></i>Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ### ABOUT ME ##### -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">About Me</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- About text -->
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-6">Hello! I'm Bhupesh 👋</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            I'm an ECE student who fell in love with web dev. Mixing circuits 📟 and code 💻 is my jam. Currently exploring React, IoT, and anything that sparks curiosity.
+          </p>
+          <p class="text-gray-600 mb-8 leading-relaxed">
+            When I'm not debugging, you'll find me tinkering with sensors or brainstorming the next side‑project with friends.
+          </p>
+          <h4 class="text-xl font-semibold text-gray-800 mb-4">Tech Stack I play with</h4>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React JS</span>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind</span>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">IoT</span>
+          </div>
+        </div>
+        <!-- Education&Experience timeline -->
+        <div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-6">My Journey So Far</h4>
+          <!--card 1 -->
+          <div class="bg-gray-50 rounded-lg p-6 border-l-4 border-blue-600 mb-6">
+            <div class="flex items-center mb-2">
+              <i class="fas fa-graduation-cap text-blue-600 mr-3"></i>
+              <h5 class="font-semibold text-gray-800">B.E. Electronics & Comm.</h5>
+            </div>
+            <p class="text-sm text-gray-600 mb-2">Panimalar Engineering College • 2023‑2027</p>
+            <p class="text-sm text-gray-600">Diving deep into embedded systems + web.</p>
+          </div>
+          <!-- card 2 -->
+          <div class="bg-gray-50 rounded-lg p-6 border-l-4 border-green-600 mb-6">
+            <div class="flex items-center mb-2">
+              <i class="fas fa-code text-green-600 mr-3"></i>
+              <h5 class="font-semibold text-gray-800">React JS Bootcamp</h5>
+            </div>
+            <p class="text-sm text-gray-600 mb-2">Q‑Spiders • 2025</p>
+            <p class="text-sm text-gray-600">Hands‑on web app building, placement prep.</p>
+          </div>
+          <!--card 3 -->
+          <div class="bg-gray-50 rounded-lg p-6 border-l-4 border-purple-600">
+            <div class="flex items-center mb-2">
+              <i class="fas fa-school text-purple-600 mr-3"></i>
+              <h5 class="font-semibold text-gray-800">Higher Secondary</h5>
+            </div>
+            <p class="text-sm text-gray-600 mb-2">Velammal MHSS • 2023</p>
+            <p class="text-sm text-gray-600">Laid the math + physics foundation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #### PROJECTS #### -->
+  <section id="projects" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">My Projects</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Some showcases of what I've built / tinkered with.</p>
+      </div>
+<!-- Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- CARD 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300">
+          <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+            <i class="fas fa-shopping-cart text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">E‑Commerce Website</h3>
+            <p class="text-gray-600 mb-4">Full‑stack shop built with React + Firebase (auth, DB, storage).</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">React</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Tailwind</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Firebase</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-github mr-1"></i>Code</a>
+              <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-external-link-alt mr-1"></i>Live</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300">
+          <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+            <i class="fas fa-music text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">Music Streaming App</h3>
+            <p class="text-gray-600 mb-4">Spotify‑like player with playlist CRUD and admin panel.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">React</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Tailwind</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Firebase</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-github mr-1"></i>Code</a>
+              <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-external-link-alt mr-1"></i>Live</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300">
+          <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+            <i class="fas fa-car text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">Smart Parking Assist</h3>
+            <p class="text-gray-600 mb-4">IoT project to locate free parking spots in real time.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Arduino</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Sensors</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Mobile App</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-github mr-1"></i>Code</a>
+              <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-external-link-alt mr-1"></i>Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ### CONTACT #### -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Open to collab, internships, or a friendly chat. Drop a message!</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- FORM -->
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+            <input id="name" name="name" type="text" placeholder="John Doe" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <input id="email" name="email" type="email" placeholder="john@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 font-semibold">
+            <i class="fas fa-paper-plane mr-2"></i>Send Message
+          </button>
+        </form>
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">Let's Connect</h3>
+            <p class="text-gray-600 mb-8">Usually reply within 24 hrs.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-envelope text-blue-600"></i></div>
+              <div><h4 class="font-semibold text-gray-800">Email</h4><p class="text-gray-600">bhupeshdhana2006@gmail.com</p></div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-phone text-blue-600"></i></div>
+              <div><h4 class="font-semibold text-gray-800">Phone</h4><p class="text-gray-600">+91 8248531009</p></div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-map-marker-alt text-blue-600"></i></div>
+              <div><h4 class="font-semibold text-gray-800">Location</h4><p class="text-gray-600">Chennai, India</p></div>
+            </div>
+          </div>
+          <!-- Icons -->
+          <div>
+            <h4 class="font-semibold text-gray-800 mb-4">Follow Me</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-800 hover:text-white"><i class="fab fa-github"></i></a>
+              <a href="https://wa.me/918248531009" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ##### FOOTER ### -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2025 Bhupesh L D. All rights reserved.</p>
+      <p class="text-gray-400 mt-4 md:mt-0">Made with ❤️ using HTML & Tailwind CSS</p>
+    </div>
+  </footer>
+  <!-- #### SCRIPTS ### -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    
+    const mobileMenu        = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click',() => mobileMenu.classList.toggle('hidden'));
+
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click',() => mobileMenu.classList.add('hidden')));
+
+    window.addEventListener('scroll', () => {
+    
+        document.querySelector('nav').classList.toggle('shadow-lg', window.scrollY > 50);
+    });
+
+    
+    document.getElementById('contact-form').addEventListener('submit', e => {
+    
+        e.preventDefault();
+    
+        const name    = document.getElementById('name').value.trim();
+    
+        const email   = document.getElementById('email').value.trim();
+    
+        const message = document.getElementById('message').value.trim();
+    
+        if (!name || !email || !message) { alert('Please fill all fields'); return; }
+    
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+        if (!emailRegex.test(email)) { alert('Invalid email'); return; }
+    
+        document.getElementById('thank-you-page').classList.add('show');
+    
+        e.target.reset();
+    
+    });
+
+
+    
+    document.getElementById('back-to-portfolio').addEventListener('click', () => {
+    
+        document.getElementById('thank-you-page').classList.remove('show');
+    
+    });
+  </script>
+</body>
+</html>
